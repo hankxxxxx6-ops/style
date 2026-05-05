@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>貝貝之旅 | 我們的歷程</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body style="background-color: #13b484;">
+    <!--<nav><div class="container"><a href="index.html" class="logo">貝貝之旅</a>
+<ul>
+    <li><a href="index.html">首頁</a></li>
+    <li><a href="about.html">LIVLY</a></li>
+    <li><a href="courses.html">密室逃脫</a></li>
+    <li><a href="tools.html" class="active">動畫</a></li>
+    <li><a href="testimonials.html">拼圖</a></li>
+</ul>
+    </div></nav>-->
+
+    <script src="nav_bar.js"></script>
+    <div id="nav_bar"></div>
+
+    <section class="container">
+        <h2>動畫一覽</h2>
+        <h3>動畫進度：</h3>
+        <table>
+            <thead><tr><th>動畫名稱</th><th>目前集數</th></tr></thead>
+            <tbody>
+                <tr><td style="color:rgb(255, 208, 1)"bgcolor="4F9D9D">芙莉蓮</td><td style="color:rgb(189, 38, 12)"bgcolor="D6D6AD">第三季全</td></tr>
+                <tr><td style="color:rgb(255, 208, 1)"bgcolor="4F9D9D">不存在的86</td><td bgcolor="D6D6AD">11</td></tr>
+                <tr><td style="color:rgb(255, 208, 1)"bgcolor="4F9D9D">暗殺教室</td><td bgcolor="D6D6AD">2</td></tr>
+                <tr><td style="color:rgb(255, 208, 1)"bgcolor="4F9D9D">四月的謊言</td><td bgcolor="D6D6AD">12</td></tr>
+                <tr><td style="color:rgb(255, 208, 1)"bgcolor="4F9D9D">怪獸8號</td><td style="color:rgb(189, 38, 12)"bgcolor="D6D6AD">第二季全</td></tr>
+                <tr><td style="color:rgb(255, 208, 1)"bgcolor="4F9D9D">棋靈王</td><td bgcolor="D6D6AD">21</td></tr>
+            </tbody>
+        </table>
+    </section>
+    <div class="marquee-container">
+    <div class="marquee-content">
+        <!-- 放置你的動畫相關圖片，建議重複兩次以達成無縫循環 -->
+        <img src="images/1111.jpg" alt="1">
+        <img src="images/2222.jpg" alt="2">
+        <img src="images/3333.jpg" alt="3">
+        <img src="images/4444.jpg" alt="4">
+        <img src="images/5555.jpg" alt="5">
+        <img src="images/6666.jpg" alt="6">
+        <img src="images/1111.jpg" alt="1">
+        <img src="images/2222.jpg" alt="2">
+        <img src="images/3333.jpg" alt="3">
+        <img src="images/4444.jpg" alt="4">
+        <img src="images/5555.jpg" alt="5">
+        <img src="images/6666.jpg" alt="6">
+    </div>
+    <style>
+        /* 跑馬燈外框：滿版寬度並隱藏超出部分 */
+.marquee-container {
+    width: 100%;
+    overflow: hidden; 
+    background: rgba(255, 255, 255, 0.459); /* 稍微透出底色 */
+    padding: 50px 0;
+    margin-top: 50px;
+    border-top: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+/* 跑馬燈內容：使用 Flex 橫向排列 */
+.marquee-content {
+    display: flex;
+    animation: scroll-left 20s linear infinite; /* 建議調慢一點(25s)看起來比較舒服 */
+    width: max-content; /* 核心修正：強制寬度等於所有圖片總寬 */
+}
+
+.marquee-content img {
+    /* 核心修正：取消固定寬度，改用高度統一，寬度自適應 */
+    height: 280px;      /* 統一所有圖片高度 */
+    width: auto;        /* 寬度根據圖片比例自動調整，不變形 */
+    
+    /* 核心修正：不裁剪圖片，完整顯示 */
+    object-fit: contain; 
+    
+    flex-shrink: 0;     /* 防止圖片被壓縮 */
+    margin: 0 20px;     /* 增加間距 */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: transform 0.3s;
+}
+
+
+/* 滑鼠移入圖片時放大 */
+.marquee-content img:hover {
+    transform: scale(1.3);
+    z-index: 10; /* 確保放大的圖片不會被後面的圖片蓋住 */
+    position: relative; /* 配合 z-index 使用 */
+}
+
+/* 滑鼠移入容器時動畫暫停 */
+.marquee-container:hover .marquee-content {
+    animation-play-state: paused;
+}
+
+/* 跑馬燈核心動畫：從 0 移到負的一半長度 */
+@keyframes scroll-left {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); } 
+}
+    </style>
+</div>
+</body>
+</html>
